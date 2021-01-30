@@ -9,6 +9,11 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #f1f5f8;
   color: #222;
+  /* background: #333; */
+  margin: 0;
+  display: grid;
+  padding: 3em;
+  place-items: center;
 }
 
 .booklist {
@@ -41,3 +46,71 @@ body {
 .book p {
   margin-top: 0.5rem;
 }
+/* 
+body {
+  background: #333;
+  margin: 0;
+  display: grid;
+  padding: 3em;
+  place-items: center;
+} */
+.boxes {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  grid-template-rows: auto;
+  /* margin:20px */
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}
+.box h1 {
+  font-size: 20px;
+  margin: 0 0 1rem 0;
+}
+.box .content {
+  padding-top: 1em;
+}
+.box ol {
+  margin-left: 0;
+}
+.box ol li {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-top:10px;
+}
+.button {
+  background: #87ceeb;
+  border: 1px solid transparent;
+  color: white;
+  margin-right: 1em;
+  padding: 0.25em 0.75em;
+  transition: all 0.25s ease-in;
+}
+.button:hover {
+  background: white;
+  border: 1px solid #87ceeb;
+  color: #333;
+}
+
+.image {
+  display: block;
+  position: relative;
+}
+
+.image.is-128x128 {
+  height: 128px;
+  width: 128px;
+}
+
+.laptop-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+

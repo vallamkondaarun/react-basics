@@ -6,19 +6,21 @@ import './index.css';
 
 import {data} from './books'
 import SpecificBook from './Book'
-import {greeting} from './testing/testing'
+import Reminder from './Reminder';
+import {Laptops} from './Laptops';
 
 function BookList() {
-  console.log(greeting);
   return (
+    <>
+    <Laptops/>
     <section className='booklist'>
       {data.map((book, index) => {
         return <SpecificBook key={book.id} {...book}></SpecificBook>;
       })}
     </section>
+    <Reminder/>
+    </>
   );
 }
-
-
 
 ReactDom.render(<BookList />, document.getElementById('root'));
